@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+.left {
+  background-color:#2196F3;
+  padding:20px;
+  float:left;
+  width:20%;/*The width is 20%, by default*/
+}
+.main {
+  background-color:#f1f1f1;
+  padding:20px;
+  float:left;
+  width:60%;/*The width is 60%, by default*/
+}
+.right {
+  background-color:#4CAF50;
+  padding:20px;
+  float:left;
+  width:20%;/*The width is 20%, by default*/
+}
+
+/*Use a media query to add a break point at 800px:*/
+@media (max-width:800px) {
+  .left, .main, .right {
+    width:100%;/*The width is 100%, when the viewport is 800px or smaller*/
+  }
+}
+</style>
+
+<body>
+
+<div class="left">
+  Left Menu<br><br><br><br>
+</div>
+<div class="main">
+  Main Content<br><br><br><br>
+</div>
+<div class="right">
+  Right Content<br><br><br><br>
+</div>
+
+
+<p>Resize the browser window.</p>
+
+<p>Make sure you reach the breakpoint at 800px when resizing this frame.</p>
+
+</body>
+
+<!-- Mirrored from www.w3schools.com/html/tryit.asp?filename=tryhtml_responsive_media_query by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 01 Jan 2018 02:16:46 GMT -->
+</html>

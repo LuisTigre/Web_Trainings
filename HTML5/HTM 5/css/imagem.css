@@ -1,0 +1,9 @@
+.orange{
+	color:orange;
+}
+
+
+body{
+	background-color:rgb(255, 99, 71, 0.5);
+	background-image:url('../img/telefone.jpg');
+}

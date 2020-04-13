@@ -1,0 +1,101 @@
+*{ margin: 0; padding: 0;}
+.container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 80px 505px 50px;
+}
+header{
+    /* border: 1px solid black; */
+    grid-column: span 12;   
+    margin: 2% 0;
+    grid-column-start: 2;
+    grid-column-end: 12;
+    
+}
+
+#header-area{
+    background-color: #333333;	
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 30px;
+    
+}
+#logo{
+    width: 12%;
+    /* border: 1px solid black; */
+    /* background-color: burlywood; */
+}
+#logo a{
+  padding: 30px 50px;
+  text-decoration: none;
+  color:white;
+}
+#menu{
+    width: 80%;
+    /* background-color: rgb(236, 214, 232); */
+}
+#menu #menu-items{ 
+    display: flex;    
+}
+#menu #menu-items li {
+    list-style: none;
+}
+#menu #menu-items li a{ 
+    display: inline-block;
+    text-decoration: none;
+    color:white;
+}
+#logo, #menu #menu-items li a{
+    padding: 10px 12px;
+}
+#menu #menu-items li a:hover{
+    background-color: #111111;
+    color:white;
+}
+#menu #menu-items > li:nth-child(5){
+   margin-left: auto;
+   padding: 8px 150px 5px 0px;
+   /* background-color: crimson; */
+   /* background-color: rgb(238, 228, 228); */
+}
+#searchbox{
+    border-radius: 15px;
+    width: 170px;
+    padding-left: 10px;
+    font-style: italic; 
+}
+
+#searchbox:focus{
+    width: 200px;
+    transition: 1s;
+}
+#searchbutton{
+    padding: 1.5px 8px;
+    border-radius: 8px;
+    background-color: rgb(3, 2, 0);
+    font-size: x-small;
+    font-style: italic; 
+    font-weight: bold;  
+    color:white;  
+    outline: #0a0101;
+}
+#searchbutton:hover{
+    opacity: 0.8;   
+    transition: 0.5s;
+}
+aside{
+    border: 1px solid red;
+    grid-column: span 1;
+    grid-column-start: 2;
+    
+    
+}
+main{
+    border: 1px solid green;
+    grid-column: span 9;
+}
+footer{
+    border: 1px solid blue;
+    grid-column: span 12;
+}

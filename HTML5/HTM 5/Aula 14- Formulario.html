@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">		
+<head>
+	<title>Formulario de inscricao</title>
+</head>
+<body>
+	<h1>Increva-se aqui</h1>
+	<div id="area_de_formulario">
+		
+	
+
+		<form action="/action_page.php"
+		  oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+		  0
+		  <input type="range"  id="a" name="a" value="50">
+		  100 +
+		  <input type="number" id="b" name="b" value="50">
+		  =
+		  <output name="x" for="a b"></output>
+		  <br><br>
+
+          <input list="produtos">
+		  <datalist id="produtos">
+			<option value="Tecnico de Informatica">
+			<option value="Tecnico de Electronica">
+			<option value="Tecnico de Energia e Instalacoes Electricas">
+			<option value="Tecnico de Desenho e Projecto">
+			<option value="Tecnico de Financas">
+			<option value="Petroquimica">				
+		  </datalist>
+
+		  <form>
+		  	Select your favorite color:
+		  	<input type="color" name="favcolor">
+		  </form>
+
+		  Enter a date after 2020-01-17:
+		  <input type="date" name="bday" min="2020-01-17"><br>
+		  Enter a date before 2020-02-09:
+		  <input type="date" name="bday" max="2020-02-09"><br>
+
+		  Birthday (date and time):
+  		  <input type="datetime-local" name="bdaytime">
+
+  		  Birthday (month and year):
+ 		 <input type="month" name="bdaymonth"><br>
+
+ 		 <input type="text" name="firstname" value="John" size="20" maxlength="5"><br>
+ 		 First name:<input type="text" name="fname" autofocus>
+
+ 		 <form action="/action_page.php" id="form1">
+		  First name: <input type="text" name="fname"><br>
+		 <input type="text" name="country_code" pattern="[A-Za-z]{3}" title="Three">
+  		  <input type="number" name="points" step="3">
+		 </form>
+
+
+		  <input type="reset">
+		  <input type="submit">
+		  <input type="submit" formaction="/action_page2.php">
+		  <input type="submit" value="Submit" formenctype="multipart/form-data"
+  				 value="Submit as Multipart/form-data">
+  		  <input type="submit" formmethod="post" value="Submit using POST">
+  		  <input type="submit" formtarget="_blank"
+  				 value="Submit to a new window">
+  		  <input type="image" src="img_submit.gif" alt="Submit" width="48" height="48">
+
+		  </form>
+		 Last name: <input type="text" name="lname" form="form1">
+
+	</div>
+</body>
+</html>

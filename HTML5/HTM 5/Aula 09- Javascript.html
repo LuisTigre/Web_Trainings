@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>Aula 9</title>
+</head>
+<body>
+<script type="text/javascript">
+	 var pic;
+	function light(sw){
+		if(sw == 0){
+			pic = "img/pic_bulboff.gif";
+		}else{
+			pic = "img/pic_bulbon.gif";
+		}
+		document.getElementById("bulb").src = pic;
+	}
+
+</script>
+	<img id="bulb" src="img/pic_bulboff.gif" alt="bulb off">
+	<div>
+		<span><input type="button" value="Turn On" name="on" onclick="light(1)"></span>
+		<span><input type="button" value="Turn On" name="off" onclick="light(0)"></span>		
+	</div>
+</body>
+</html>

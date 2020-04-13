@@ -1,0 +1,54 @@
+
+*{ margin: 0; padding: 0; } li, ul{ list-style: none;} a{text-decoration: none;color: white;} i{color:rgb(20, 2, 53);font-size: 18px;}
+
+body, button, input, label, select, td, textarea {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+}
+.container{
+   
+}
+
+header {
+    display: flex;
+    /* padding: 10px; */
+    background-color: #2851A3;
+    background-color: rgb(67, 114, 207);
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px;
+}
+
+.logo-search{
+    display: flex;
+    align-items: inherit;
+}
+.logo-search input{
+    padding: 5px 120px 5px 5px;
+    margin-left: 5px;
+    border-radius: 5px;
+
+}
+.menu{
+    display: flex;
+}
+.menu li a {
+    padding: 0px 12px 1px;
+    font-weight: bold;
+}
+header div a{
+    font-size: 30px;
+}
+/* header div a{
+    background-image: url(../img/squre-facebook.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 0 -33px;
+    display: block;
+    height: 24px;
+    outline: none;
+    overflow: hidden;
+    text-indent: -999px;
+    white-space: nowrap;
+    width: 24px;
+} */

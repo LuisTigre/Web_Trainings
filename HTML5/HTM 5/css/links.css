@@ -1,0 +1,21 @@
+.orange{
+	color:orange;
+}
+
+a:link{
+	color:magenta;
+	text-decoration: none;
+}
+a:active{
+	color:green;
+	text-decoration: none;
+}
+a:hover{
+	color:red;
+	text-decoration: underline;
+	font-size: 105%;
+}
+a:visited{
+	color:red;
+	text-decoration: underline;
+}

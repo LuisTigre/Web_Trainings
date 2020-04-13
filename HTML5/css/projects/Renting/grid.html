@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Grid </title>
+        <meta charset="utf-8">
+        <meta name="Description" content="Experiencia de CSS Grid">
+        <meta name="author" content="Luis Tigre">
+        <meta name="keyword" content="css, grid, responsive">
+
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            .container{
+                display: grid;
+                grid-template-columns: repeat(12, 1fr);
+                grid-template-rows: 50px 535px 50px;
+            }
+
+            header{
+                grid-column: span 12;
+                display: flex;
+                background-color: powderblue;
+            }
+            aside{
+                grid-column: span 2;
+                background-color: palevioletred;
+            }
+            main{
+                grid-column: span 10;
+                background-color: palegoldenrod
+            }
+            footer{
+                grid-column: span 12;
+                background-color: powderblue;
+            }
+            header > div{
+               padding:15px;
+               
+            }
+            header > div:nth-child(3){
+                margin-left:auto;
+            }
+
+           
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <div>Home</div>
+                <div>Search</div>
+                <div>Logout</div>
+            </header>
+            <aside>MENU</aside>
+            <main>CONTENT</main>
+            <footer>FOOTER</footer>
+        </div>
+    </body>
+</html>
