@@ -5,18 +5,18 @@ body, button, input, label, select, td, textarea {
     font-family: Helvetica, Arial, sans-serif;
     font-size: 12px;
 }
-.container{
-   
+.container {
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
 }
-
 header {
     display: flex;
-    /* padding: 10px; */
     background-color: #2851A3;
     background-color: rgb(67, 114, 207);
     justify-content: space-around;
     align-items: center;
     padding: 8px;
+    grid-column: 1/6;
 }
 
 .logo-search{
@@ -52,3 +52,36 @@ header div a{
     white-space: nowrap;
     width: 24px;
 } */
+
+aside.sidebar-esquerda{
+     display: flex;
+     flex-direction: column;
+     grid-column: 1;
+     border: 1px solid rgb(248, 30, 30);    
+     
+    }
+    aside.sidebar-esquerda > section{
+        display: flex;
+        flex-direction: column;
+        padding-top: 30px;
+        padding-left: 30px;
+        /* border: 1px solid red; */
+    }
+    aside.sidebar-esquerda > section > a > div{
+        display: grid;
+        padding: 5px 10px;      
+        grid-template-columns: 30px 80px 10px;
+        align-items: center;
+        color: black;
+    }
+    aside.sidebar-esquerda > section > a > div > i{ color: blue; font-size: 18px;}
+    main.principal{
+        border: 1px solid rgb(70, 30, 248);
+        grid-column: 2/4;
+}
+section.anuncios{
+    border: 1px solid rgb(218, 17, 67);
+}
+aside.sidebar-direita{
+    border: 1px solid rgb(0, 0, 0);
+}
