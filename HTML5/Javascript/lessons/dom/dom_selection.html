@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Manipulation Excercise</title>
+
+    <style>
+        .green {
+            color: green;
+        }
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="el" class="element">Ola Mundo !!!</h1>
+</body>
+<script>
+    var el = document.getElementById("el")
+        el = doucument.getElementsByTagName("h1")
+        el = document.querySelectorAll("h1.element")
+        
+
+    el.innerHTML = "Hello Programmer !!!" // content change
+    el.setAttribute("class", "green") // set attribute verde class 
+    el.style.color = "red" 
+</script>
+</html>

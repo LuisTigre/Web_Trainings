@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+
+    <style>
+        .container{
+            display: flex;           
+            align-items: center;
+            flex-direction: column;
+        }
+        #grid {
+            display: grid;
+            width: 90vw;
+            height: 90vh;
+            border: 1px solid black;
+            color: black;
+            resize: both;
+            overflow: auto;             
+        }
+        #grid > div {
+            resize: both;
+            overflow: auto;            
+            border: 1px solid black;
+            max-width: 100%;
+            
+            
+           
+        }
+    </style>
+</head>
+<body> 
+    <div class="container">
+        <div class="painel" contenteditable="true">
+            <input type="number" id="rows">
+            <button onclick="myFunction()">Insert</button>
+        </div>
+        <div id="grid"></div>     
+    </div>
+
+<script>
+function myFunction() {
+    var rows = document.getElementById('rows').value;
+    var grid = document.getElementById('grid')
+    grid.style.gridTemplate = `repeat(${rows}, 1fr) / repeat(${rows}, 1fr)`;
+      var content = "";
+    for (i = 0; i < rows * rows; i++) {
+       content += `<div contenteditable='true' id=${i}>${i}</div>`
+    }
+    grid.innerHTML = content; 
+}
+</script>
+
+</body>   
+
+</body>
+</html>

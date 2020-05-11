@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Manipulation Excercise</title>
+
+    
+</head>
+<body id="container1">
+    <div id="container">
+        <h2 id="el1">Thi is it !!!</h2>
+        <h2 id="el2">Aulhor is</h2>
+    </div>
+</body>
+<script>
+    var el = document.createElement("h1")  //element creation
+    var content = document.createTextNode("Hello JS programmer !!!");
+    el.appendChild(content);
+
+    var container = document.getElementById('container');
+    var el1 = document.getElementById("el1")
+
+    // container.appendChild(el);
+    container.insertBefore(el,el1);
+
+    var containerContent = container.innerHTML
+
+    alert(containerContent)
+
+    container.removeChild(el);
+    container.replaceChild(el,el2);
+
+</script>
+</html>

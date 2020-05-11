@@ -3,7 +3,7 @@ const tic_tac_toe = {
 
     // ATTRIBUTES
     board: ['','','','','','','','',''],
-    simbols: {
+    symbols: {
                 options: ['O','X'],
                 turn_index: 0,
                 change: function(){
@@ -12,6 +12,7 @@ const tic_tac_toe = {
             },
     container_element: null,
     gameover: false,
+    game_start: false,
     winning_sequences: [
                         [0,1,2],
                         [3,4,5],
@@ -31,13 +32,13 @@ const tic_tac_toe = {
     make_play: function(position) {
         if (this.gameover) return false;
         if (this.board[position] === ''){
-            this.board[position] = this.simbols.options[this.simbols.turn_index];
+            this.board[position] = this.symbols.options[this.symbols.turn_index];
             this.draw();
-            let winning_sequences_index = this.check_winning_sequences( this.simbols.options[this.simbols.turn_index] );
+            let winning_sequences_index = this.check_winning_sequences( this.symbols.options[this.symbols.turn_index] );
             if (winning_sequences_index >= 0){
                 this.game_is_over();
             } else{
-                this.simbols.change();
+                this.symbols.change();
             }
             return true;
         }
@@ -61,13 +62,14 @@ const tic_tac_toe = {
 
     game_is_over: function() {
         this.gameover = true;
+        this.game_start = false;
         console.log('GAME OVER');
-    },
-
+    },    
     start: function() {
         this.board.fill('');
         this.draw();
-        this.gameover = false;       
+        this.gameover = false;
+        this.game_start = true;
     },
 
     draw: function() {
@@ -76,7 +78,11 @@ const tic_tac_toe = {
         for ( i in this.board ) {
             content += '<div onclick="tic_tac_toe.make_play(' + i + ')">' + this.board[i] + '</div>';
         };
+        
+        content +="<div><input type='submit' onclick='tic_tac_toe.start()'  value='RESTART'></div>"
 
+        
+        
         this.container_element.innerHTML = content;
     },
 }; 
