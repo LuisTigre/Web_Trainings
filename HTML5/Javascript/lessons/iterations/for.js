@@ -8,7 +8,7 @@ const bolsaVanessa = [
     'alcool em gel'
 ];
 
-for (var index = 0; index < bolsaVanessa.length; index++) {
+for (var index = 0; index < bolsaVanessa.length; index++) { 
      console.log(`${index+1}. ${bolsaVanessa[index]}`);
     
 }

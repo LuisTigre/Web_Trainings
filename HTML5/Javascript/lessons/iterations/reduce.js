@@ -6,8 +6,8 @@ const coronaCases =[
 
 ]
 
-const totalCases = coronaCases.reduce((sum, coronaCases) => {
-    return sum + coronaCases.active
+const totalCases = coronaCases.reduce((sum, cases) => {
+    return sum + cases.active
 },0)
 
 console.log(totalCases);
